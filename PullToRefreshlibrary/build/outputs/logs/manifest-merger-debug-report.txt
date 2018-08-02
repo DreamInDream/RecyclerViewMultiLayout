@@ -1,0 +1,41 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:1-12:12
+	package
+		ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:3:5-49
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:6:5-32
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:5:5-31
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+	android:allowBackup
+		ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:4:5-32
+uses-sdk
+ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:8:5-43
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:8:5-43
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:8:5-43
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:8:5-43
+INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:8:5-43
+	android:targetSdkVersion
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:8:5-43
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:8:15-40
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml
+application
+ADDED from D:\AndroidStudioProject\RecyclerViewMultiLayout\PullToRefreshlibrary\AndroidManifest.xml:10:5-20
