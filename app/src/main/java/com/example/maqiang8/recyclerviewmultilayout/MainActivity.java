@@ -8,18 +8,34 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    PullToRefreshRecyclerView pullToRefreshRecyclerView;
     RecyclerView rv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        rv=findViewById(R.id.recyclerview);
+        pullToRefreshRecyclerView=findViewById(R.id.recyclerview);
+        pullToRefreshRecyclerView.setMode(PullToRefreshBase.Mode.BOTH);
+        pullToRefreshRecyclerView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<RecyclerView>() {
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<RecyclerView> refreshView) {
+                pullToRefreshRecyclerView.onRefreshComplete();
+            }
+
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<RecyclerView> refreshView) {
+                pullToRefreshRecyclerView.onRefreshComplete();
+            }
+        });
+        rv=pullToRefreshRecyclerView.getRefreshableView();
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         rv.setLayoutManager(linearLayoutManager);
         ArrayList<String> picUrl=new ArrayList<>();
