@@ -101,6 +101,8 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 
 	private SmoothScrollRunnable mCurrentSmoothScrollRunnable;
 
+	private RefreshState mRefreshState = RefreshState.DEFALULT;
+
 	// ===========================================================
 	// Constructors
 	// ===========================================================
@@ -754,7 +756,27 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 		if (mMode.showFooterLoadingLayout()) {
 			mFooterLayout.refreshing();
 		}
-
+		/**
+		 *这里就是我添加的代码
+		 */
+		if(mCurrentMode == Mode.PULL_FROM_START){
+			/**
+			 * pulldown refresh to reset
+			 * 上拉将刷新状态恢复成可以继续上拉
+			 */
+			if(mRefreshState == RefreshState.COMPLETE){
+				setRefreshState(RefreshState.DEFALULT);
+			}
+		}else if(mCurrentMode == Mode.PULL_FROM_END){
+			/**
+			 * if loading is completed ,so do not call refreshing listener
+			 * 上拉时候不回掉接口，就是这里就是这里就是这里
+			 */
+			if(mRefreshState == RefreshState.COMPLETE){
+				setState(State.RESET);
+				return;
+			}
+		}
 		if (doScroll) {
 			if (mShowViewWhileRefreshing) {
 
@@ -784,7 +806,38 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 			callRefreshListener();
 		}
 	}
+	public static enum RefreshState{
 
+		//默认
+		DEFALULT,
+		//加载完成
+		COMPLETE
+	}
+
+	//改变状态的方法
+	final void setRefreshState(RefreshState state){
+		mRefreshState = state;
+		switch (mRefreshState) {
+			case DEFALULT:
+				//默认字符叫做下拉刷新
+				mFooterLayout.setPullLabel(getContext().getString(R.string.pull_to_up_refresh_pull_label));
+				break;
+			case COMPLETE:
+				//完成以后更换底部拉出来要展示的文字
+				mFooterLayout.setPullLabel(getContext().getString(R.string.pull_to_refresh_complete_label));
+			default:
+				break;
+		}
+	}
+
+	//提供方法，如果是true则就算加载完成
+	public void setIsComplete(Boolean isComplete){
+		if(isComplete){
+			setRefreshState(RefreshState.COMPLETE);
+		}else{
+			setRefreshState(RefreshState.DEFALULT);
+		}
+	}
 	/**
 	 * Called when the UI has been to be updated to be in the
 	 * {@link State#RELEASE_TO_REFRESH} state.
@@ -989,7 +1042,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 		}
 
 		if (USE_HW_LAYERS) {
-			/**
+			 /**
 			 * Use a Hardware Layer on the Refreshable View if we've scrolled at
 			 * all. We don't use them on the Header/Footer Views as they change
 			 * often, which would negate any HW layer performance boost.
@@ -1230,6 +1283,10 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 			if (mState != State.PULL_TO_REFRESH && itemDimension >= Math.abs(newScrollValue)) {
 				setState(State.PULL_TO_REFRESH);
 			} else if (mState == State.PULL_TO_REFRESH && itemDimension < Math.abs(newScrollValue)) {
+				//这里加上一个来自底部并且状态是加载完成的状态的判断就搞定啦。
+				if(mRefreshState == RefreshState.COMPLETE && mCurrentMode == Mode.PULL_FROM_END){
+					return;
+				}
 				setState(State.RELEASE_TO_REFRESH);
 			}
 		}

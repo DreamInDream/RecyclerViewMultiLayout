@@ -69,12 +69,14 @@ public final class R {
         public static int pull_to_refresh_header_vertical = 0x7f0f0002;
     }
     public static final class string {
-        public static int pull_to_refresh_from_bottom_pull_label = 0x7f150001;
-        public static int pull_to_refresh_from_bottom_refreshing_label = 0x7f150002;
-        public static int pull_to_refresh_from_bottom_release_label = 0x7f150003;
-        public static int pull_to_refresh_pull_label = 0x7f150004;
-        public static int pull_to_refresh_refreshing_label = 0x7f150005;
-        public static int pull_to_refresh_release_label = 0x7f150006;
+        public static int pull_to_refresh_complete_label = 0x7f150001;
+        public static int pull_to_refresh_from_bottom_pull_label = 0x7f150002;
+        public static int pull_to_refresh_from_bottom_refreshing_label = 0x7f150003;
+        public static int pull_to_refresh_from_bottom_release_label = 0x7f150004;
+        public static int pull_to_refresh_pull_label = 0x7f150005;
+        public static int pull_to_refresh_refreshing_label = 0x7f150006;
+        public static int pull_to_refresh_release_label = 0x7f150007;
+        public static int pull_to_up_refresh_pull_label = 0x7f150008;
     }
     public static final class styleable {
         public static int[] GifTextureView = { 0x7f040002, 0x7f040003 };

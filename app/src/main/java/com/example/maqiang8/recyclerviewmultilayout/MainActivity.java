@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<RecyclerView> refreshView) {
                 pullToRefreshRecyclerView.onRefreshComplete();
+                pullToRefreshRecyclerView.setIsComplete(true);
             }
         });
         rv=pullToRefreshRecyclerView.getRefreshableView();
