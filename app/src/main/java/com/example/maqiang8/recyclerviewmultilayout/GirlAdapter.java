@@ -58,6 +58,7 @@ public class GirlAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             iv =  itemView.findViewById(R.id.iv);
             tv_girl=itemView.findViewById(R.id.tv_girl);
             ll_girl=itemView.findViewById(R.id.ll_girl);
+            int b=0;
         }
     }
 

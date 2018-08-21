@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPullUpToRefresh(PullToRefreshBase<RecyclerView> refreshView) {
                 pullToRefreshRecyclerView.onRefreshComplete();
                 pullToRefreshRecyclerView.setIsComplete(true);
+                int a=9;
             }
         });
         rv=pullToRefreshRecyclerView.getRefreshableView();
