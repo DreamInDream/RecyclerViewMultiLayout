@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPullDownToRefresh(PullToRefreshBase<RecyclerView> refreshView) {
                 pullToRefreshRecyclerView.onRefreshComplete();
                 int a=0;
+                int b=0;
             }
 
             @Override
