@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("k", "onCreate: ");
         setContentView(R.layout.activity_main);
         pullToRefreshRecyclerView=findViewById(R.id.recyclerview);
         pullToRefreshRecyclerView.setMode(PullToRefreshBase.Mode.BOTH);
